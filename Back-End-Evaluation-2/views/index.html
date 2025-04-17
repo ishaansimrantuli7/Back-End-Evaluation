@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Booking Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+    <video class="background-video" autoplay loop muted>
+        <source src="../public/media/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="form-container">
+            <h1>📚 Unlock Your Next Read: Reserve Your Book Today! 📖</h1>
+            <form id="libraryBookingForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="book">Select Book:</label>
+                    <select id="book" name="book" required>
+                        <option value="">-- Select a Book --</option>
+                        <option value="book1">The Great Gatsby</option>
+                        <option value="book2">To Kill a Mockingbird</option>
+                        <option value="book3">1984</option>
+                        <option value="book4">Pride and Prejudice</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Reservation Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group gender-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other" required>
+                    <label for="other">Other</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../public/js/script.js"></script>
+</body>
+</html>

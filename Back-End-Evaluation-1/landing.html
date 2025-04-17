@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #D2D2D2;
+            background-image:
+            repeating-linear-gradient(
+                to right, transparent 0 100px,
+                #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                to bottom, transparent 0 100px,
+                #25283b22 100px 101px
+            );
+        }
+        
+        body::before{
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(images/bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        }
+    </style>
+    <link rel="stylesheet" href="landstyle.css">
+</head>
+<body>
+    
+    <header>
+        <figure class="logo">
+            <img src="images/Logob1.PNG" alt="">
+        </figure>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Books</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carousel next">
+            <div class="list">
+                <article class="item other_1">
+                    <div class="main-content" 
+                    style="background-color: #8dccc9;">
+                        <div class="content">
+                            <h2>Murder on the Orient Express</h2>
+                            <p class="price"></p>
+                            <p class="description">
+                                Agatha Christie's most famous murder mystery
+                                Just after midnight, a snowdrift stops the Orient Express in its tracks. The luxurious train is surprisingly full for the time of the year, but by the morning it is one passenger fewer. An American tycoon lies dead in his compartment, stabbed a dozen times, his door locked from the inside.
+                                Isolated and with a killer in their midst, detective Hercule Poirot must identify the murderer  in case he or she decides to strike again.
+                            </p>
+                            <button class="addToCard">
+                                <a href="registration.html">Register</a>
+                            </button>
+                            <button class="addToCard">
+                                <a href="index.html">Reserve your book</a>
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="https://i.pinimg.com/736x/4a/8d/08/4a8d08f1288373ba87624014ddc5678b.jpg" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </article>
+                <article class="item active">
+                    <div class="main-content" 
+                    style="background-color: #f5bfaf;">
+                        <div class="content">
+                            <h2>Shiny Broken Pieces</h2>
+                            <p class="price"> </p>
+                            <p class="description">
+                                June, Bette, and Gigi are competing one final time for a spot at the prestigious American Ballet Company. With the stakes higher than ever, these girls have everything to lose…and no one is playing.<br>
+                                June is starting to finally see herself as a prima ballerina. But being the best could mean sacrificing the love of her life. Legacy dancer Bette is determined to clear her name after she was suspended and accused of hurting her rival, Gigi. And Gigi is not going to let Bette—or the other dancers who bullied her—go unpunished.<br>
+                                It all comes down to this last dance. Who will make the cut? And who will lose her dream forever?
+                            </p>
+                            <button class="addToCard">
+                                <a href="registration.html">Register</a>
+                            </button>
+                            <button class="addToCard">
+                                <a href="index.html">Reserve your book</a>
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="https://i.pinimg.com/736x/95/6f/8d/956f8d50eb032e72ba449ecacde7cfef.jpg" alt="">
+                        <figcaption> </figcaption>
+                    </figure>
+                </article>
+                <article class="item other_2">
+                    <div class="main-content" 
+                    style="background-color: #dedfe1;">
+                        <div class="content">
+                            <h2>Two Sides to Every Murder</h2>
+                            <p class="price"> </p>
+                            <p class="description">
+                                Most people’s births aren’t immortalized in a police report—but Olivia was born during the infamous Camp Lost Lake murders. Seventeen years later, Olivia’s life looks pretty perfect . . . until she discovers the man she calls dad is not her biological father. Now she wants answers about her bloodline, and the only place she knows to look is Camp Lost Lake.<br>
+                                Luckily for Olivia and Reagan, Camp Lost Lake is finally reopening, providing the perfect opportunity to find answers. But someone else is dead set on keeping the past hidden, even if it means committing murder.
+                            </p>
+                            <button class="addToCard">
+                                <a href="registration.html">Register</a>
+                            </button>
+                            <button class="addToCard">
+                                <a href="index.html">Reserve your book</a>
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="https://i.pinimg.com/736x/4e/4b/f4/4e4bf47dd743294baf7f2772f48f6eef.jpg" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </article>
+                <article class="item">
+                    <div class="main-content" 
+                    style="background-color: #788d60;">
+                        <div class="content">
+                            <h2>Harry Potter and Chamber of Secrets</h2>
+                            <p class="price"></p>
+                            <p class="description">
+                                Harry Potter's summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as through turned to stone . Dobby's sinister predictions seem to be coming true.
+                            </p>
+                            <button class="addToCard">
+                                <a href="registration.html">Register</a>
+                            </button>
+                            <button class="addToCard">
+                                <a href="index.html">Reserve your book</a>
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="https://i.pinimg.com/736x/b8/df/34/b8df3413b2b3898ab26723cea03cc019.jpg" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </article>
+            </div>
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+        </section>
+    </main>
+    <div class="banner">
+        <div class="slider" style="--quantity: 10">
+            <div class="item" style="--position: 1"><img src="https://i.pinimg.com/236x/d1/61/b2/d161b2439a85a7adfb36445c92649069.jpg" alt=""></div>
+            <div class="item" style="--position: 2"><img src="https://i.pinimg.com/474x/bd/5f/b5/bd5fb566c8dbe0c3d1d51fd9fb9e8842.jpg" alt=""></div>
+            <div class="item" style="--position: 3"><img src="https://i.pinimg.com/474x/67/9a/6b/679a6b70a56c14f43fdae373658dfbfa.jpg" alt=""></div>
+            <div class="item" style="--position: 4"><img src="https://i.pinimg.com/236x/a7/37/af/a737af535de5687fa0e6b0c0f8cf4e4f.jpg" alt=""></div>
+            <div class="item" style="--position: 5"><img src="https://i.pinimg.com/236x/e7/69/cd/e769cd8bc71c469f55ae084acb7c06a3.jpg" alt=""></div>
+            <div class="item" style="--position: 6"><img src="https://i.pinimg.com/236x/07/e1/dc/07e1dc22299ba382c66fe03c4d88f495.jpg" alt=""></div>
+            <div class="item" style="--position: 7"><img src="https://i.pinimg.com/236x/6b/c9/a2/6bc9a25a78798dc7b2be3fb79165ff0c.jpg" alt=""></div>
+            <div class="item" style="--position: 8"><img src="https://i.pinimg.com/474x/6f/73/7e/6f737e5daa7fbfe4c83027e52c29bdbc.jpg" alt=""></div>
+            <div class="item" style="--position: 9"><img src="https://i.pinimg.com/474x/10/34/94/103494eb8fa23869f9f8c87860392dca.jpg" alt=""></div>
+            <div class="item" style="--position: 10"><img src="https://i.pinimg.com/236x/07/b8/0b/07b80bb3fc15448d1005df84e85b8d66.jpg" alt=""></div>
+        </div>
+        <div class="content">
+            <div class="model"></div>
+            <br>
+            <br>
+            
+            <h1 data-content="BOOKVERSE">
+                BOOKVERSE
+            </h1>
+            <!-- <div class="author">
+                <h2>LUN DEV</h2>
+                <p><b>Web Design</b></p>
+                <p>
+                    Subscribe to the channel to watch many interesting videos
+                </p>
+            </div> -->
+            
+        </div>
+    </div>
+
+    <script src="landserver.js"></script>
+</body>
+</html>

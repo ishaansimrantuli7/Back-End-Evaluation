@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="../public/css/landstyle.css">
+</head>
+<body>
+    <header>
+        <figure class="logo">
+            <img src="../public/media/Logob1.PNG" alt="Bookverse Logo">
+        </figure>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Books</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="carousel next">
+            <div class="list">
+                <article class="item other_1">
+                    <div class="main-content" style="background-color: #8dccc9;">
+                        <div class="content">
+                            <h2>Murder on the Orient Express</h2>
+                            <p class="description">Agatha Christie's most famous murder mystery...</p>
+                            <button><a href="registration.html">Register</a></button>
+                            <button><a href="index.html">Reserve your book</a></button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="../public/media/book1.jpg" alt="Book Cover">
+                    </figure>
+                </article>
+            </div>
+            <div class="arrows">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </section>
+    </main>
+    <script src="../public/js/carousel.js"></script>
+</body>
+</html>
