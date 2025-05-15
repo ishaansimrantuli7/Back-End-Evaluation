@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Registration</title>
+    <link rel="stylesheet" href="/css/registyle.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- Sign Up Panel -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>New to Brand?</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illum voluptatibus suscipit maxime eligendi sed libero dolor consequatur culpa ab accusantium!</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign In Form -->
+        <div class="form-container sign-in-container">
+            <form action="/auth/login" method="POST">
+                <h2 class="title">Sign In</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required />
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p class="social-text">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon" title="Facebook">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/facebook.svg" alt="Facebook" width="24" height="24" />
+                    </a>
+                    <a href="#" class="social-icon" title="Twitter">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/twitter.svg" alt="Twitter" width="24" height="24" />
+                    </a>
+                    <a href="#" class="social-icon" title="Google">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/google.svg" alt="Google" width="24" height="24" />
+                    </a>
+                    <a href="#" class="social-icon" title="LinkedIn">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg" alt="LinkedIn" width="24" height="24" />
+                    </a>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="form-container sign-up-container">
+            <form action="/auth/register" method="POST">
+                <h2 class="title">Sign Up</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" placeholder="Username" required />
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required />
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <img src="/media/signup.svg" alt="Sign Up Illustration" class="signup-svg" />
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

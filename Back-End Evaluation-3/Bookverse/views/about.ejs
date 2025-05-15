@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | BookVerse</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Quicksand:wght@500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #f8f6f1, #eae4da);
+      color: #3b2f2f;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #4a3221;
+      padding: 0.8rem 1rem;
+      display: flex;
+      justify-content: center; /* Center the content */
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(246, 244, 244, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 45px;
+      margin-right: 65rem;
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .main-nav a:hover {
+      color: #f2c94c;
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #4a3222;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .story,
+    .mission,
+    .future-plans,
+    .team {
+      margin-top: 2.5rem;
+    }
+
+    h2 {
+      font-family: 'EB Garamond', serif;
+      font-size: 3rem;
+      color: #4a3222;
+      margin-bottom: 1.2rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .content {
+      font-size: 1.2rem;
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    .quote {
+      margin: 2rem 0;
+      font-style: italic;
+      border-left: 4px solid #f2c94c;
+      padding-left: 1rem;
+      color: #6c4f3d;
+      font-size: 1.2rem;
+    }
+
+    .mission ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .member {
+      background: #fffefb;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      padding: 1rem;
+      max-width: 280px;
+      text-align: center;
+    }
+
+    .member img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .member h4 {
+      margin-bottom: 0.5rem;
+      color: #4a3222;
+    }
+
+    .member p {
+      font-size: 1rem;
+      color: #6c5e5e;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      background-color: #4a3221;
+      color: white;
+      font-size: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <figure class="logo">
+      <img src="/images/Logob1.PNG" alt="BookVerse Logo" />
+    </figure>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/reserve">Books</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/About">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to BookVerse</h1>
+    <p>BookVerse is designed for a seamless digital reading experience. It allows users to browse, reserve, and access books effortlessly while maintaining a nostalgic yet modern interface. Dive into a universe of books, discover new worlds, and embark on unforgettable journeys—all from the comfort of your device.</p>
+  </section>
+
+  <section class="story">
+    <h2>Our Story</h2>
+    <div class="content">
+      <p>At BookVerse, we believe in the transformative power of literature. Our platform was born from the desire to bring the magic of books into the digital age. We wanted to create a space where readers could easily access a diverse library of books, manage their reading lists, and connect with other book lovers—without the hassle of physical libraries or bookstores.</p>
+      <p>The idea for BookVerse came when we realized that the way people interact with books was changing. With the rise of e-books, audiobooks, and digital libraries, it became clear that the future of reading was digital. However, many existing platforms lacked the intuitive interface and personalized touch that readers crave. That’s when we decided to build a platform that would combine the best of both worlds—a digital library that felt as comforting and nostalgic as a physical bookshelf.</p>
+      <p>We are not just a company, but a team of passionate book lovers committed to making the world of books accessible to everyone. Whether you’re an avid reader or just starting your literary journey, BookVerse is here to guide you through an incredible adventure.</p>
+    </div>
+  </section>
+
+  <section class="mission">
+    <h2>Our Mission</h2>
+    <div class="content">
+      <p>Our mission at BookVerse is to offer an all-in-one platform for readers that simplifies the process of discovering, reserving, and enjoying books. We are committed to curating a space where readers can easily find books that match their interests and preferences while promoting the joy of reading.</p>
+      <p>We aim to break down the barriers to book discovery and create a welcoming, user-friendly environment that encourages exploration. Whether you’re searching for a best-seller, a hidden gem, or a timeless classic, we ensure that every book is just a few clicks away.</p>
+      <p>Here’s what we strive for:</p>
+      <ul>
+        <li>✨ To create an intuitive, easy-to-use platform where anyone can access books, anywhere, anytime.</li>
+        <li>📚 To offer a wide variety of books across genres, ensuring there’s something for every type of reader.</li>
+        <li>🔍 To offer personalized recommendations based on user preferences, reading history, and ratings.</li>
+        <li>💬 To build a community where readers can discuss books, share reviews, and connect with others who share similar interests.</li>
+        <li>🚀 To constantly innovate and improve our platform, introducing new features that enhance the reading experience.</li>
+      </ul>
+      <div class="quote">"Books are a uniquely portable magic." — Stephen King</div>
+    </div>
+  </section>
+
+  <section class="future-plans">
+    <h2>Our Future Plans</h2>
+    <div class="content">
+      <p>As BookVerse continues to grow, we’re excited about the future and all the new possibilities that technology offers for enhancing the reading experience. Our roadmap is full of innovative ideas that will take the platform to the next level:</p>
+      <ul>
+        <li>📲 Launching dedicated mobile apps for iOS and Android, giving readers the flexibility to enjoy their books on the go.</li>
+        <li>💬 Introducing social features, where users can join virtual book clubs, participate in live discussions, and share book reviews.</li>
+        <li>🌍 Expanding our collection to include international authors, diverse voices, and underrepresented genres to ensure there’s something for everyone.</li>
+        <li>🧠 Integrating machine learning algorithms to provide more accurate book recommendations based on your preferences and reading patterns.</li>
+        <li>🛒 Introducing a marketplace for readers to buy and sell books, both digital and physical, connecting readers and authors worldwide.</li> </ul> </div>
+
+</section>
+<section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+        <div class="member">
+            <img src="https://i.pravatar.cc/200?img=1" alt="Team Member 1" />
+            <h4>John Doe</h4>
+            <p>CEO & Founder</p>
+        </div>
+        <div class="member">
+            <img src="https://i.pravatar.cc/200?img=12" alt="Team Member 2" />
+            <h4>Jane Smith</h4> <p>Head of Development</p>
+        </div>
+        <div class="member">
+            <img src="https://i.pravatar.cc/200?img=44" alt="Team Member 3" />
+            <h4>Emma Brown</h4> <p>Marketing Expert</p> </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 BookVerse. All rights reserved.</p> 
+    </footer>
+</body>
+</html>

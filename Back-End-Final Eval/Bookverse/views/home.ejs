@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookverse</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="/css/landstyle.css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #D2D2D2;
+            background-image:
+            repeating-linear-gradient(
+                to right, transparent 0 100px,
+                #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                to bottom, transparent 0 100px,
+                #25283b22 100px 101px
+            );
+            font-family: Arial, sans-serif;
+            color: #3d2c2c;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        body::before{
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(/images/bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        }
+        /* Banner Section */
+        .discount-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .discount-banner img {
+            max-width: 40%;
+        }
+        .banner-content h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        .banner-content p {
+            font-size: 20px;
+            color: #666;
+        }
+        .banner-content button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        /* Trending Books Section */
+        .trending-books {
+            background-color: white;
+            padding: 60px 30px;
+            text-align: center;
+        }
+        .trending-books h2 {
+            font-size: 36px;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 40px;
+            color: #333;
+        }
+        .books-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .book-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 180px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .book-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .book-card h4 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .book-card p {
+            font-size: 14px;
+            color: #666;
+        }
+        .book-card .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+        /* Customer Reviews */
+        .customer-reviews {
+            background-color: #f9f9f9;
+            padding: 40px;
+            text-align: center;
+        }
+        .reviews-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .review-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .review-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .review-card h4 {
+            margin: 10px 0;
+        }
+        .stars {
+            color: #ffcc00;
+            font-size: 18px;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .footer {
+            background-color: black;
+            padding: 40px 0;
+            text-align: center;
+            color: white;
+        }
+        .footer-container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .footer-nav {
+            margin-bottom: 15px;
+        }
+        .footer-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        .footer-nav a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            margin-bottom: 15px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 18px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #ddd;
+        }
+        .footer-text {
+            font-size: 14px;
+        }
+        .highlight {
+            color: #e44d26;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <figure class="logo">
+            <img src="/images/Logob1.PNG" alt="Bookverse Logo" />
+        </figure>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/reserve">Books</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carousel next">
+            <div class="list">
+                <article class="item other_1">
+                    <div class="main-content" style="background-color: #8dccc9;">
+                        <div class="content">
+                            <h2>Murder on the Orient Express</h2>
+                            <p class="price"></p>
+                            <p class="description">
+                                Agatha Christie's most famous murder mystery
+                                Just after midnight, a snowdrift stops the Orient Express in its tracks. The luxurious train is surprisingly full for the time of the year, but by the morning it is one passenger fewer. An American tycoon lies dead in his compartment, stabbed a dozen times, his door locked from the inside.
+                                Isolated and with a killer in their midst, detective Hercule Poirot must identify the murderer – in case he or she decides to strike again.
+                            </p>
+                            <button class="addToCard">
+                                <a href="/register">Register</a>
+                            </button>
+                            <button class="addToCard">
+                                <a href="/reserve">Reserve your book</a>
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="https://i.pinimg.com/736x/4a/8d/08/4a8d08f1288373ba87624014ddc5678b.jpg" alt="Murder on the Orient Express" />
+                        <figcaption></figcaption>
+                    </figure>
+                </article>
+                <article class="item active">
+                    <div class="main-content" style="background-color: #f5bfaf;">
+                        <div class="content">
+                            <h2>Shiny Broken Pieces</h2>
+                            <p class="price"></p>
+                            <p class="description">
+                                June, Bette, and Gigi are competing one final time for a spot at the prestigious American Ballet Company. With the stakes higher than ever, these girls have everything to lose…and no one is playing.<br />
+                                June is starting to finally see herself as a prima ballerina. But being the best could mean sacrificing the love of her life. Legacy dancer Bette is determined to clear her name after she was suspended and accused of hurting her rival, Gigi. And Gigi is not going to let Bette—or the other dancers who bullied her—go unpunished.<br />
+                                It all comes down to this last dance. Who will make the cut? And who will lose her dream forever?
+                            </p>
+                            <button class="addToCard">
+                                <a href="/register">Register</a>
+                            </button>
+                            <button class="addToCard">
+                                <a href="/reserve">Reserve your book</a>
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="https://i.pinimg.com/736x/95/6f/8d/956f8d50eb032e72ba449ecacde7cfef.jpg" alt="Shiny Broken Pieces" />
+                        <figcaption></figcaption>
+                    </figure>
+                </article>
+                <article class="item other_2">
+                    <div class="main-content" style="background-color: #dedfe1;">
+                        <div class="content">
+                            <h2>Two Sides to Every Murder</h2>
+                            <p class="price"></p>
+                            <p class="description">
+                                Most people’s births aren’t immortalized in a police report—but Olivia was born during the infamous Camp Lost Lake murders. Seventeen years later, Olivia’s life looks pretty perfect . . . until she discovers the man she calls dad is not her biological father. Now she wants answers about her bloodline, and the only place she knows to look is Camp Lost Lake.<br />
+                                Luckily for Olivia and Reagan, Camp Lost Lake is finally reopening, providing the perfect opportunity to find answers. But someone else is dead set on keeping the past hidden, even if it means committing murder.
+                            </p>
+                            <button class="addToCard">
+                                <a href="/register">Register</a>
+                            </button>
+                            <button class="addToCard">
+                                <a href="/reserve">Reserve your book</a>
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="https://i.pinimg.com/736x/4e/4b/f4/4e4bf47dd743294baf7f2772f48f6eef.jpg" alt="Two Sides to Every Murder" />
+                        <figcaption></figcaption>
+                    </figure>
+                </article>
+                <article class="item">
+                    <div class="main-content" style="background-color: #788d60;">
+                        <div class="content">
+                            <h2>Harry Potter and Chamber of Secrets</h2>
+                            <p class="price"></p>
+                            <p class="description">
+                                Harry Potter's summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as through turned to stone . Dobby's sinister predictions seem to be coming true.
+                            </p>
+                            <button class="addToCard">
+                                <a href="/register">Register</a>
+                            </button>
+                            <button class="addToCard">
+                                <a href="/reserve">Reserve your book</a>
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="image">
+                        <img src="https://i.pinimg.com/736x/b8/df/34/b8df3413b2b3898ab26723cea03cc019.jpg" alt="Harry Potter and Chamber of Secrets" />
+                        <figcaption></figcaption>
+                    </figure>
+                </article>
+            </div>
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Trending Books Section -->
+    <section class="trending-books">
+        <h2>Trending in Bookverse</h2>
+        <div class="books-container" id="booksContainer">
+            <!-- Books will be added dynamically here -->
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="customer-reviews">
+        <h2 class="section-title">Come and Join</h2>
+        <h3 class="section-subtitle">OUR HAPPY CUSTOMERS</h3>
+        <div class="reviews-container">
+            <div class="review-card">
+                <img src="https://i.pinimg.com/236x/a6/58/32/a65832155622ac173337874f02b218fb.jpg" alt="User 1" />
+                <h4>Emma Johnson</h4>
+                <p>Amazing collection! The books were delivered on time, and I love the selection.</p>
+                <span class="stars">★★★★★</span>
+            </div>
+            <div class="review-card">
+                <img src="https://i.pinimg.com/236x/bd/d9/aa/bdd9aaee8c129b1d0a7180512c6f7ae5.jpg" alt="User 2" />
+                <h4>Michael Smith</h4>
+                <p>Great deals and fantastic customer service. Highly recommended!</p>
+                <span class="stars">★★★★★</span>
+            </div>
+            <div class="review-card">
+                <img src="https://i.pinimg.com/236x/be/d9/ca/bed9ca19b3cc3fb6815a0b57753199d5.jpg" alt="User 3" />
+                <h4>Sophia Davis</h4>
+                <p>The books are in perfect condition, and I got a great discount. Will shop again!</p>
+                <span class="stars">★★★★★</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <h2 class="footer-logo">Bookverse</h2>
+            <nav class="footer-nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="footer-text">© 2025 All rights reserved. <span class="highlight">Bookverse</span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Book data
+            const books = [
+                { name: "The Art of Fashion", author: "Alec Hanson", price: "$80.00 - $200.00", img: "https://i.pinimg.com/736x/63/45/a7/6345a702104bc4b8d371a679069c1c5a.jpg" },
+                { name: "100 Selected Poems", author: "Alyce Kris", price: "$400.00 $350.00", img: "https://i.pinimg.com/736x/47/c9/e2/47c9e2cf3e494ecc7951f846046c23ef.jpg" },
+                { name: "Life is What You Make It", author: "Gloria Burge", price: "$200.00 $100.00", img: "https://i.pinimg.com/736x/12/04/5e/12045ed5809e5ee407a8c955a8953d0d.jpg" },
+                { name: "Heartless", author: "Marissa Meyer", price: "$214.22", img: "https://i.pinimg.com/736x/76/21/25/762125bf20e406143381d084b15da962.jpg" },
+                { name: "The Untethered Soul", author: "Michael A. Singer", price: "$214.22", img: "https://i.pinimg.com/736x/b2/5c/a3/b25ca352b68274074b98adb4363b11a1.jpg" },
+                { name: "African Rising", author: "Noreen Meyer", price: "$300.00 $250.00", img: "https://i.pinimg.com/236x/d7/4e/ba/d74ebae25beeee8e719c5ee4ab90ad93.jpg" }
+            ];
+
+            const booksContainer = document.getElementById("booksContainer");
+
+            books.forEach((book, index) => {
+                let bookID = "book-" + (index + 1);
+
+                let bookElement = document.createElement("div");
+                bookElement.classList.add("book-card");
+                bookElement.setAttribute("id", bookID);
+
+                bookElement.innerHTML = `
+                    <img src="${book.img}" alt="${book.name}">
+                    <h4>${book.name}</h4>
+                    <p>By: ${book.author}</p>
+                    <span class="price">${book.price}</span>
+                `;
+
+                booksContainer.appendChild(bookElement);
+            });
+
+            // Scroll animations
+            ScrollReveal().reveal('.discount-banner', { delay: 200, distance: '50px', origin: 'bottom' });
+            ScrollReveal().reveal('.trending-books', { delay: 300, distance: '50px', origin: 'bottom' });
+            ScrollReveal().reveal('.customer-reviews', { delay: 400, distance: '50px', origin: 'bottom' });
+            ScrollReveal().reveal('.book-card', { interval: 200, distance: '50px', origin: 'bottom' });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            ScrollReveal().reveal('.book-section', { delay: 200, distance: '50px', origin: 'bottom', interval: 100 });
+            ScrollReveal().reveal('.customer-reviews', { delay: 300, distance: '50px', origin: 'bottom' });
+            ScrollReveal().reveal('.footer', { delay: 400, distance: '50px', origin: 'bottom' });
+        });
+    </script>
+</body>
+</html>
